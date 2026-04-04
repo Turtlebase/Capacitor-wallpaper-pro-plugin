@@ -1,0 +1,1 @@
+# Capacitor-wallpaper-pro-plugin
