@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "lib": ["ES2017", "DOM"],
+    "module": "ES2020",
+    "moduleResolution": "bundler",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "dist/esm",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2017"
+  },
+  "include": ["src"]
+}

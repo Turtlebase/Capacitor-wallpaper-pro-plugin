@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  capacitor-wallpaper-pro  •  res/xml/video_live_wallpaper.xml
+  Android WallpaperService metadata descriptor.
+  Shown in the system live-wallpaper picker.
+-->
+<wallpaper
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/live_wallpaper_description"
+    android:thumbnail="@mipmap/ic_launcher"
+    android:settingsActivity="com.wallpaperpro.LiveWallpaperSettingsActivity" />

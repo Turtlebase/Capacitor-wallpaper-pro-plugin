@@ -1,0 +1,79 @@
+{
+  "name": "capacitor-wallpaper-pro",
+  "version": "1.0.0",
+  "description": "Advanced wallpaper management for Capacitor: parallax, dual screens, 24-hour schedules, full filter pipeline — pass a URL, the plugin does everything.",
+  "main": "dist/plugin.cjs.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "unpkg": "dist/plugin.js",
+  "files": [
+    "android/src/main/",
+    "android/build.gradle",
+    "dist/",
+    "ios/Plugin/",
+    "ios/CapacitorWallpaperPro.podspec",
+    "CapacitorWallpaperPro.podspec"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/capacitor-wallpaper-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/capacitor-wallpaper-pro/issues"
+  },
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "wallpaper",
+    "android",
+    "ios",
+    "filter",
+    "blur",
+    "parallax",
+    "schedule",
+    "ionic"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
+    "clean": "rimraf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build",
+    "docgen": "docgen --api WallpaperProPlugin --output-readme README.md --output-json dist/docs.json",
+    "lint": "eslint . --ext .ts",
+    "fmt": "prettier --write --parser=typescript 'src/**/*.ts'"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/docgen": "^0.2.2",
+    "@capacitor/ios": "^6.0.0",
+    "@ionic/eslint-config": "^0.4.0",
+    "@ionic/prettier-config": "^4.0.0",
+    "@ionic/swiftlint-config": "^1.1.2",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@types/react": "^19.2.14",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "react": "^19.2.4",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.60.1",
+    "typescript": "~5.4.5"
+  },
+  "peerDependencies": {
+    "@capacitor/core": "^6.0.0"
+  },
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  },
+  "prettier": "@ionic/prettier-config",
+  "eslintConfig": {
+    "extends": "@ionic/eslint-config/recommended"
+  }
+}
