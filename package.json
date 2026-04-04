@@ -75,6 +75,15 @@
   },
   "prettier": "@ionic/prettier-config",
   "eslintConfig": {
-    "extends": "@ionic/eslint-config/recommended"
+    "extends": "@ionic/eslint-config/recommended",
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/consistent-type-imports": "off",
+      "import/order": "off",
+      "@typescript-eslint/adjacent-overload-signatures": "off"
+    },
+    "ignorePatterns": ["dist/", "node_modules/"]
   }
 }
