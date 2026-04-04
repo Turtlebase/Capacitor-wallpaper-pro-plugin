@@ -36,10 +36,11 @@
     "ionic"
   ],
   "scripts": {
-    "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
+    "build": "npm run clean && tsc && npm run rollup",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
+    "rollup": "rollup -c rollup.config.js",
     "docgen": "docgen --api WallpaperProPlugin --output-readme README.md --output-json dist/docs.json",
     "lint": "eslint . --ext .ts",
     "fmt": "prettier --write --parser=typescript 'src/**/*.ts'"
