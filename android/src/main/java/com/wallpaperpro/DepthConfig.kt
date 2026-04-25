@@ -12,7 +12,7 @@ import org.json.JSONObject
 // ─── Clock ────────────────────────────────────────────────────────────────────
 
 enum class ClockStyle { DIGITAL, ANALOG, MINIMAL, NEON, RETRO, WORD }
-enum class ClockAnimation { NONE, PULSE, GLOW, FADE, SLIDE, FLIP }
+enum class ClockAnimation { NONE, PULSE, GLOW, FADE, SLIDE, FLIP, NEON }
 enum class TimeFormat { H12, H24 }
 
 data class ClockConfig(
@@ -49,6 +49,7 @@ data class ClockConfig(
                 "fade"    -> ClockAnimation.FADE
                 "slide"   -> ClockAnimation.SLIDE
                 "flip"    -> ClockAnimation.FLIP
+                "neon"    -> ClockAnimation.NEON
                 else      -> ClockAnimation.PULSE
             },
             format         = if (json.optString("format", "24h") == "12h") TimeFormat.H12 else TimeFormat.H24,

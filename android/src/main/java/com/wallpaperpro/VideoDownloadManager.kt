@@ -81,7 +81,7 @@ class VideoDownloadManager(private val context: Context) {
 
     // ── download ──────────────────────────────────────────────────────────
 
-    private fun download(url: String, dest: File, onProgress: ProgressCallback?) {
+    private suspend fun download(url: String, dest: File, onProgress: ProgressCallback?) {
         Log.d(TAG, "Downloading video: $url → ${dest.name}")
 
         val tmpFile = File(dest.parent, "${dest.name}.tmp")
