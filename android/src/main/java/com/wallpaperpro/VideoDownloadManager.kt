@@ -105,11 +105,6 @@ class VideoDownloadManager(private val context: Context) {
                 FileOutputStream(tmpFile).use { output ->
                     var bytes: Int
                     while (input.read(buf).also { bytes = it } != -1) {
-                        // Honour coroutine cancellation between chunks
-                        if (!coroutineContext.isActive) {
-                            tmpFile.delete()
-                            throw CancellationException("Download cancelled")
-                        }
                         output.write(buf, 0, bytes)
                         received += bytes
                         onProgress?.invoke(received, total)
